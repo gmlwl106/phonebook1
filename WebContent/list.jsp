@@ -6,8 +6,7 @@
 <%
 	PhoneDao phoneDao = new PhoneDao();
 	List<PersonVo> personList = phoneDao.getPersonList();
-	
-	System.out.println(personList);
+
 %>
     
 <!DOCTYPE html>
@@ -39,11 +38,18 @@
 				<td><%=p.getCompany() %></td>
 			</tr>
 			<tr>
-				
+				<td>
+					<form action="./updateForm.jsp" method="get">
+						<button type="submit" name="id" value=<%=p.getPersonId() %>>수정</button>
+					</form>
+				</td>
+				<td>
+					<form action="./delete.jsp" method="get">
+						<button type="submit" name="id" value=<%=p.getPersonId() %>>삭제</button>
+					</form>
+				</td>
 			</tr>
 		</table>
-		<button type="submit">수정</button>
-		<button type="submit">삭제</button>
 		<br>
 	<% } %>
 	

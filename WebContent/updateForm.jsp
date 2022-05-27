@@ -32,7 +32,7 @@
 		이름(name)      <input type="text" name="name" value="<%=name%>"> <br>
 		핸드폰(hp)        <input type="text" name="hp" value="<%=hp%>"> <br>
 		회사(company)     <input type="text" name="company" value="<%=company%>"> <br>
-		코드(id)      <input type="text" name="id" value="<%=id%>" readonly>
+		<!-- 코드(id)  -->     <input type="hidden" name="id" value="<%=id%>" readonly>
 		<br>
 		<button type="submit">수정</button>
 	</form>

@@ -5,6 +5,11 @@ public class PersonVo {
 	private String name;
 	private String hp;
 	private String company;
+	
+	
+
+	public PersonVo() {
+	}
 
 	public PersonVo(String name, String hp, String company) {
 		this.name = name;

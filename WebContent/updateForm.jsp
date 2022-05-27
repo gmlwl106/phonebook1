@@ -8,19 +8,12 @@
 	int id = Integer.parseInt(request.getParameter("id"));
 
 	PhoneDao phoneDao = new PhoneDao();
-	List<PersonVo> phoneList = phoneDao.getPersonList();
+	PersonVo person = phoneDao.getPerson(id);
 	
-	String name = "";
-	String hp = "";
-	String company = "";
-	for(PersonVo p : phoneList) {
-		if(p.getPersonId() == id) {
-			name = p.getName();
-			hp = p.getHp();
-			company = p.getCompany();
-			break;
-		}
-	}
+	String name = person.getName();
+	String hp = person.getHp();
+	String company = person.getCompany();
+	
 	
 %>
 <!DOCTYPE html>
